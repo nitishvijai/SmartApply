@@ -2,9 +2,11 @@ from selenium import webdriver, common
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
+import sys
+
 
 # Set up web scraper
-def init_scraper(query):
+def init_scraper():
     service = Service("../../chromedriver/stable/chromedriver")
     driver = webdriver.Chrome(service=service)
     return driver
@@ -67,9 +69,16 @@ def scrape_indeed(driver, query):
         print()
 
 
-if __name__ == "__main__":
-    query = process_search()
-    driver = init_scraper(query)
+
+
+
+def call_from_app(query):
+    driver = init_scraper()
     scrape_indeed(driver, query)
-    
+    driver.close()
+
+if __name__ == "__main__":
+    driver = init_scraper()
+    query = process_search()
+    scrape_indeed(driver, query)
     driver.close()
