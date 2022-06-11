@@ -1,5 +1,6 @@
 from flask import Flask
 import web_scraper
+import json
 
 app = Flask(__name__)
 
@@ -9,5 +10,5 @@ def hello_world():
 
 @app.route("/jobs/<search>")
 def get_jobs(search):
-    web_scraper.call_from_app(search)
-    return "Jobs found."
+    jobs = web_scraper.call_from_app(search)
+    return "<pre>" + json.dumps(jobs) + "</pre>"
