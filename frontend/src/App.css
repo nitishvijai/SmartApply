@@ -1,7 +1,29 @@
 .App {
+  background: linear-gradient(270deg, #00a3ff, #003eff, #2800ff, #6000ff);
+  background-size: 800% 800%;
+
+  -webkit-animation: Blues 30s ease infinite;
+  -moz-animation: Blues 30s ease infinite;
+  animation: Blues 30s ease infinite;
+
   text-align: center;
-  background-color: #282c34;
   color: white;
+}
+
+@-webkit-keyframes Blues {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes Blues {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes Blues {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 
 .App-logo {
@@ -33,19 +55,29 @@
 input[type=text] {
   padding: 6px;
   border: none;
-  margin-top: 40px;
+  border-radius: 2%;
+  margin-top: 35px;
   font-size: 17px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   width: 30em;
 }
 
 button {
-  padding: 6px 10px;
-  margin-top: 40px;
+  padding: 9px;
+  margin-top: 38px;
   background: #ddd;
   font-size: 17px;
   border: none;
   cursor: pointer;
+}
+
+h2 {
+  margin-top: -25px;
+  font-weight: normal;
+}
+
+.logo-placeholder {
+  margin-bottom: 2em;
 }
 
 @keyframes App-logo-spin {
