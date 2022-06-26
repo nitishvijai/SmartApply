@@ -1,4 +1,4 @@
-.App {
+.background {
   background: linear-gradient(270deg, #00a3ff, #003eff, #2800ff, #6000ff);
   background-size: 800% 800%;
 
@@ -38,7 +38,6 @@
 }
 
 .App-header {
-  
   min-height: 98.4vh;
   display: flex;
   flex-direction: column;
@@ -46,6 +45,16 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.search-header {
+  min-height: 98.4vh;
+}
+
+
+.logo-placeholder.results {
+  width: 100%;
+  float: left;
 }
 
 .App-link {
@@ -69,10 +78,11 @@ button {
   font-size: 17px;
   border: none;
   cursor: pointer;
+  height: 34.5px;
 }
 
 h2 {
-  margin-top: -25px;
+  margin-top: 10px;
   font-weight: normal;
 }
 
@@ -80,11 +90,15 @@ h2 {
   margin-bottom: 2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left-align {
+  float: left;
+}
+
+.logo.left-align {
+  margin-left: 2em;
+  margin-top: 1em;
+}
+
+.search-container.left-align {
+  margin-left: 2em;
 }
